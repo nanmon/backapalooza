@@ -1,0 +1,28 @@
+{
+  "name": "backapalooza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanmon/backapalooza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanmon/backapalooza/issues"
+  },
+  "homepage": "https://github.com/nanmon/backapalooza#readme",
+  "dependencies": {
+    "apollo-datasource": "^0.2.0",
+    "apollo-datasource-rest": "^0.2.0",
+    "apollo-server": "^2.2.2",
+    "graphql": "^14.0.2",
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.4"
+  }
+}
