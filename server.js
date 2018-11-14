@@ -5,9 +5,17 @@ const resolvers = require('./graphql/resolvers');
 const schema = fs.readFileSync(__dirname + '/graphql/schema.graphql', 'utf8');
 const typeDefs = gql(schema);
 
+const UserAPI = require('./datasources/user');
+const LaunchAPI = require('./datasources/launch');
+const store = require('./db')();
+
 const server = new ApolloServer({ 
     resolvers, 
-    typeDefs
+    typeDefs,
+    dataSources: () => ({
+        userAPI: new UserAPI({ store }),
+        launchAPI: new LaunchAPI()
+    })
  });
 
 server.listen().then(({ url }) => {
